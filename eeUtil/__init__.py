@@ -125,6 +125,8 @@ def _path(path):
             return path[1:]
         elif len(path) > 6 and path[:6] == 'users/':
             return path
+        elif len(path) > 9 and path[:9] == 'projects/':
+            return path
         else:
             return os.path.join(_getHome(), path)
     return _getHome()
